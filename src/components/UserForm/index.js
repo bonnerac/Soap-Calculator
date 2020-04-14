@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 
 function UserForm() {
@@ -22,6 +23,9 @@ function UserForm() {
                     <Form.Label>Approximately how much soap do you have in your home (in oz)?</Form.Label>
                     <Form.Control as="textarea" rows="1" />
                 </Form.Group>
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
             </Form>
 
             <div>
