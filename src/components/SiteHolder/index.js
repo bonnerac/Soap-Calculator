@@ -1,11 +1,15 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container'
 import UserForm from '../UserForm'
 import './style.css';
 
 function SiteHolder() {
     return (
         <>
-            <UserForm />
+            <Container>
+                <UserForm />
+            </Container>
+
         </>
     )
 }

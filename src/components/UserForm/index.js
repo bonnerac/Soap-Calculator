@@ -9,7 +9,7 @@ function UserForm() {
             <Form>
                 <Form.Group controlId="SoapRange">
                     <Form.Label>Amount of soap per handwash:</Form.Label>
-                    <Form.Control type="range" min="0" max="1" step="0.1" custom />
+                    <Form.Control type="range" min="0" max="1" step="0.1" />
                 </Form.Group>
                 <Form.Group controlId="NumOfPeople">
                     <Form.Label>How many people use soap in your home?</Form.Label>
