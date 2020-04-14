@@ -6,35 +6,28 @@ function UserForm() {
     return (
         <>
             <Form>
-                <Form.Group controlId="exampleForm.ControlInput1">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" />
+                <Form.Group controlId="SoapRange">
+                    <Form.Label>Amount of soap per handwash:</Form.Label>
+                    <Form.Control type="range" min="0" max="1" step="0.1" custom />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect1">
-                    <Form.Label>Example select</Form.Label>
-                    <Form.Control as="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </Form.Control>
+                <Form.Group controlId="NumOfPeople">
+                    <Form.Label>How many people use soap in your home?</Form.Label>
+                    <Form.Control as="textarea" rows="1" />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlSelect2">
-                    <Form.Label>Example multiple select</Form.Label>
-                    <Form.Control as="select" multiple>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </Form.Control>
+                <Form.Group controlId="WashPerDay">
+                    <Form.Label>On average, how many times are all household members washing their hands?</Form.Label>
+                    <Form.Control as="textarea" rows="1" />
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Example textarea</Form.Label>
-                    <Form.Control as="textarea" rows="3" />
+                <Form.Group controlId="SoapOnHand">
+                    <Form.Label>Approximately how much soap do you have in your home (in oz)?</Form.Label>
+                    <Form.Control as="textarea" rows="1" />
                 </Form.Group>
             </Form>
+
+            <div>
+                Your Soap will Last you ## days.
+            </div>
+
         </>
     )
 }
