@@ -1,10 +1,11 @@
 import React from 'react';
+import UserForm from '../UserForm'
 import './style.css';
 
 function SiteHolder() {
     return (
         <>
-            <h1>Hello World</h1>
+            <UserForm />
         </>
     )
 }
