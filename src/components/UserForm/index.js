@@ -8,14 +8,15 @@ function UserForm() {
     const [totalPeople, setTotalPeople] = useState(0);
     const [washTimes, setWashTimes] = useState(0);
     const [soapInHouse, setSoapInHouse] = useState(0);
+    const [total, setTotal] = useState('?')
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
         const totalWashes = (totalPeople * washTimes);
         const totalSoapUsedMl = (totalWashes * soapAmount);
         const totalSoapUsedOz = (totalSoapUsedMl * 0.033814);
-        alert(`You use ${totalSoapUsedOz} oz of soap per day`)
-
+        const finalTotal = (soapInHouse / totalSoapUsedOz)
+        setTotal(finalTotal)
     }
 
 
@@ -44,7 +45,7 @@ function UserForm() {
             </Form>
 
             <div>
-                Your Soap will Last you ## days.
+                <p>Your Soap will Last you {total} days.</p>
             </div>
 
         </>
