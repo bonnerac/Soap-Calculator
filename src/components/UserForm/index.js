@@ -4,17 +4,18 @@ import Button from 'react-bootstrap/Button'
 
 
 function UserForm() {
-    const [soapAmount, setSoapAmount] = useState(0);
+    const [soapAmount, setSoapAmount] = useState(0.7);
     const [totalPeople, setTotalPeople] = useState(0);
     const [washTimes, setWashTimes] = useState(0);
     const [soapInHouse, setSoapInHouse] = useState(0);
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        alert(`Submitting Soap Amount ${soapAmount}`);
-        alert(`Submitting Number of People ${totalPeople}`);
-        alert(`Submitting Wash Times Per Day ${washTimes}`);
-        alert(`Submitting Amount of Soap In House ${soapInHouse}`);
+        const totalWashes = (totalPeople * washTimes);
+        const totalSoapUsedMl = (totalWashes * soapAmount);
+        const totalSoapUsedOz = (totalSoapUsedMl * 0.033814);
+        alert(`You use ${totalSoapUsedOz} oz of soap per day`)
+
     }
 
 
@@ -30,7 +31,7 @@ function UserForm() {
                     <Form.Control as="textarea" rows="1" value={totalPeople} onChange={e => setTotalPeople(e.target.value)} />
                 </Form.Group>
                 <Form.Group controlId="WashPerDay">
-                    <Form.Label>On average, how many times are all household members washing their hands?</Form.Label>
+                    <Form.Label>On average, how many times are each person washing their hands each day?</Form.Label>
                     <Form.Control as="textarea" rows="1" value={washTimes} onChange={e => setWashTimes(e.target.value)} />
                 </Form.Group>
                 <Form.Group controlId="SoapOnHand">
